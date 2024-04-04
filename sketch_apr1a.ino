@@ -4,23 +4,23 @@
 #define pin1 13
 #define pin2 32
 
-DHT dht1(pin1, DHT11);   //Azul
-DHT dht2(pin2, DHT22);   //Blanco
+DHT dht1(pin1, DHT11);  //Azul
+DHT dht2(pin2, DHT22);  //Blanco
 
 Adafruit_BMP085 bmp;
 
 void setup() {
-  Serial.being(115200);
+  Serial.begin(115200);
   Serial.println("Test de sensores: ");
 
-  dht1.being();
-  dht2.being();
+  dht1.begin();
+  dht2.begin();
 
-  bmp.being();
+  bmp.begin();
 }
 
 void loop() {
-  
+
   delay(2000);
   leerdht1();
 
@@ -29,20 +29,18 @@ void loop() {
 
   delay(2000);
   leerbmp();
-
 }
 
-void leerdht1(){
+void leerdht1() {
 
-  float t1= dht1.readTemperature();
-  float h1= dht1.readHumidity();
+  float t1 = dht1.readTemperature();
+  float h1 = dht1.readHumidity();
 
-  while(isnan(t1) || isnan(h1))
-  {
+  while (isnan(t1) || isnan(h1)) {
     Serial.println("Lectura fallida en el sensor DHT11, repitiendo la lectura...");
     delay(2000);
-    t1= dht1.readTemperature();
-    h1= dht1.readHumidity();
+    t1 = dht1.readTemperature();
+    h1 = dht1.readHumidity();
   }
 
   Serial.print("Temperatura DHT1: ");
@@ -54,20 +52,18 @@ void leerdht1(){
   Serial.println(" % ");
 
   Serial.println("----------------");
-
 }
 
-void leerdht2(){
+void leerdht2() {
 
-  float t2= dht2.readTemperature();
-  float h2= dht2.readHumidity();
+  float t2 = dht2.readTemperature();
+  float h2 = dht2.readHumidity();
 
-  while(isnan(t2) || isnan(h2))
-  {
+  while (isnan(t2) || isnan(h2)) {
     Serial.println("Lectura fallida en el sensor DHT12, repitiendo la lectura...");
     delay(2000);
-    t2= dht1.readTemperature();
-    h2= dht1.readHumidity();
+    t2 = dht1.readTemperature();
+    h2 = dht1.readHumidity();
   }
 
   Serial.print("Temperatura DHT2: ");
@@ -79,14 +75,12 @@ void leerdht2(){
   Serial.println(" % ");
 
   Serial.println("----------------");
-
 }
 
 
-void leerbmp(){
+void leerbmp() {
 
-  float temp= bmp.readTemperature();
-  float presion= bmp.readPressure();
-  float altitud= bmp.readAltituted();
-
+  float temp = bmp.readTemperature();
+  float presion = bmp.readPressure();
+  float altitud = bmp.readAltitude();
 }
