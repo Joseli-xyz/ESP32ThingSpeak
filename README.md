@@ -1,1 +1,3 @@
-Aun queda actualizar un poco el código oara que se use solo el DHT11. Aparte de insertar el login de la pagina de ThingSpeak para añadir los valores que queremos que muestren.
+//Este código está completo para el uso de un solo sensor DHT11. Permite la lectura de módulos como temperatura y humedad. 
+//Tendrás que usar la red de Wifi local, junto a su contraseña para hacerla trabajar.
+//También tendrán disponible otros códigos para un segundo sensor DHT y para el módulo BMP.
