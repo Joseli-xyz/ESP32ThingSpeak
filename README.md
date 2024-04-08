@@ -5,7 +5,8 @@ You will need to use your local WiFi, with your password to make it work.
 It also comes with codes for a secondary DHT sensor, and for a BMP module. 
 You will need the ESP32, DHT, Adafruit and ThingSpeak libraries to be installed to work, included with a ThingSpeak account.
 
-To make it run, just simply open your Arduino IDE, verify the code and upload it, make sure you press the BOOT button on the right second. 
+-Inside the first folder you will find the code to make it run through the Arduino terminal, unlike the second folder which allows you to connect through the ThingSpeak API.
+-To make it run, just simply open your Arduino IDE, verify the code and upload it, make sure you press the BOOT button from the ESP32 module on the right second. 
 
 -ESP32 with BMP 180 and DHT sensor mounted
 <img src="https://iotdesignpro.com/sites/default/files/inline-images/ESP32-Wi-Fi-Weather-Station-using-DHT11-and-BMP180-Sensor-Circuit-Diagram.png">
