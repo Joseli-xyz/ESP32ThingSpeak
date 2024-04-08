@@ -1,6 +1,6 @@
 # Description 
 
--This is a completed and finished version of the code, it allows the use of one DHT sensor only, and it´s temperature and humidity modules as well. 
+-This is a complete and finished version of the code, it allows the use of one DHT sensor only, and it´s temperature and humidity modules as well. 
 You will need to use your local WiFi, with your password to make it work.
 It also comes with codes for a secondary DHT sensor, and for a BMP module. 
 You will need the ESP32, DHT, Adafruit and ThingSpeak libraries to be installed to work, included with a ThingSpeak account.
